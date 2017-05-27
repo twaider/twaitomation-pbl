@@ -1,0 +1,40 @@
+{
+    "author": "twaider",
+    "dependencies": {
+        "pebble-clay": "^1.0.2"
+    },
+    "keywords": [
+        "pebble-app"
+    ],
+    "name": "twaitomation",
+    "pebble": {
+        "capabilities": [
+            "configurable"
+        ],
+        "displayName": "Twaitomation",
+        "enableMultiJS": true,
+        "messageKeys": [
+            "APP_READY",
+            "LOCK_STATE",
+            "DEVICE_UUID",
+            "PASS",
+            "STATUS",
+            "USERNAME",
+            "DELAYED",
+            "SERVER"
+        ],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "basalt"
+        ],
+        "uuid": "64a45d0b-b7d3-4ced-b2ae-1dddfa55fd3f",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.0.0"
+}
