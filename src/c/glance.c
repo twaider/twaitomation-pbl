@@ -7,9 +7,10 @@
 
 char *kitchen = "kitchen_table_light";
 char *sofa = "sofa_light";
-char* device_ids[2];
+char *dormitory = "light_dorm";
+char *livingRoom = "light_living_room";
 
-
+char* device_ids[4];
 
 static Window *s_main_window;
 static SimpleMenuLayer *s_simple_menu_layer;
@@ -81,6 +82,14 @@ static void main_window_load(Window *window) {
     .title = "Kitchen Table",
     .callback = menu_select_callback,
   };
+  s_first_menu_items[num_a_items++] = (SimpleMenuItem) {
+    .title = "Dormitory Light",
+    .callback = menu_select_callback,
+  };
+  s_first_menu_items[num_a_items++] = (SimpleMenuItem) {
+    .title = "Living Room Light",
+    .callback = menu_select_callback,
+  };
 
   s_menu_sections[0] = (SimpleMenuSection) {
     .num_items = NUM_FIRST_MENU_ITEMS,
@@ -102,6 +111,8 @@ void main_window_unload(Window *window) {
 static void init() {
   device_ids[0] = sofa; 
   device_ids[1] = kitchen;
+  device_ids[2] = dormitory;
+  device_ids[3] = livingRoom;
   
   prv_init_app_message();
   s_main_window = window_create();  

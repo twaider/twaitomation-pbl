@@ -133,6 +133,7 @@ Pebble.addEventListener('ready', function(e) {
       var json = JSON.parse(req.response);
       console.log(json);
       Pebble.sendAppMessage({'APP_READY': true});
+      Pebble.sendAppMessage({'STATES': json});
     }
   });
   
